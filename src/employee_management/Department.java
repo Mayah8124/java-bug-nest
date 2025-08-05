@@ -37,4 +37,19 @@ public class Department {
         return employeesList;
     }
 
+    public List<Employee> getEmployeesList() {
+        return employeesList;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String showEmployeesDetails() {
+        StringBuilder employeesDetails = new StringBuilder();
+        for (Employee e : employeesList) {
+            employeesDetails.append(e.getEmployeeId()).append(" - ").append(e.getName()).append("\n");
+        }
+        return employeesDetails.toString();
+    }
 }
