@@ -1,10 +1,10 @@
 package employee_management;
 
 public class PartTimeEmployee {
-    public int employeeId;
-    public String name;
-    public double hoursWorked;
-    public double hourlyRate;
+    private int employeeId;
+    private String name;
+    private double hoursWorked;
+    private double hourlyRate;
 
 
     public PartTimeEmployee(int employeeId, String name, double hoursWorked, double hourlyRate) {
