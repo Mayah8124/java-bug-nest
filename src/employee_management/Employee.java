@@ -1,6 +1,6 @@
 package employee_management;
 
-public class Employee {
+public abstract class Employee {
     private int employeeId;
     private String name;
 
@@ -17,7 +17,5 @@ public class Employee {
         return name;
     }
 
-    public double calculatePay(){
-        return 0;
-    }
+    public abstract double calculatePay();
 }

@@ -1,7 +1,7 @@
 package employee_management;
 
 public class FullTimeEmployee extends Employee {
-    private double monthlySalary;
+    protected double monthlySalary;
 
     public FullTimeEmployee(int employeeId, String name, double monthlySalary) {
         super(employeeId,name);
