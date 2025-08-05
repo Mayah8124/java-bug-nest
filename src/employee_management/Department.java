@@ -1,5 +1,7 @@
 package employee_management;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * TODO : a department is a collection of employees. It has a name and a set of employees in it.
@@ -14,19 +16,25 @@ public class Department {
      * their pay.
      */
 
-    private List<Employee> employeesList;
-    private String name;
+    private final List<Employee> employeesList;
+    private final String name;
 
     public Department(List<Employee> employees, String name) {
         this.employeesList = employees;
         this.name = name;
+
+        Set<String> existedEmployee = new HashSet<>();
+
+        for (Employee e : employeesList) {
+            String key = e.getEmployeeId() + "_" + e.getName();
+            if (existedEmployee.add(key)) {
+                this.employeesList.add(e);
+            }
+        };
     }
 
     public List<Employee> getEmployees() {
         return employeesList;
     }
 
-    public Department(String name) {
-        this.name = name;
-    }
 }

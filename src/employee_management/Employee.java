@@ -18,4 +18,6 @@ public abstract class Employee {
     }
 
     public abstract double calculatePay();
+
+    public abstract double calculateTax();
 }

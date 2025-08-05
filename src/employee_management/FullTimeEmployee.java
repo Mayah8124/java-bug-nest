@@ -11,5 +11,9 @@ public class FullTimeEmployee extends Employee {
     public double calculatePay() {
         return monthlySalary;
     }
+
+    public double calculateTax(){
+        return (monthlySalary * 20) / 100;
+    }
 }
 
