@@ -48,7 +48,12 @@ public class Department {
     public String showEmployeesDetails() {
         StringBuilder employeesDetails = new StringBuilder();
         for (Employee e : employeesList) {
-            employeesDetails.append(e.getEmployeeId()).append(" - ").append(e.getName()).append("\n");
+            employeesDetails.append("Department : ")
+                    .append(e.getName())
+                    .append(" (")
+                    .append(e.getEmployeeId()).append(") : ")
+                    .append(e.calculatePay())
+                    .append("\n");
         }
         return employeesDetails.toString();
     }
