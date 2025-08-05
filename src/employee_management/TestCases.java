@@ -1,12 +1,15 @@
 package employee_management;
 
+import employee_management.FullTimeEmployee;
+import employee_management.PartTimeEmployee;
+
 public class TestCases {
     public static FullTimeEmployee fullTimeEmployeeKoto(){
-        return new FullTimeEmployee(1, "Koto", 3_000_000);
+        return new FullTimeEmployee( "Koto", 3_000_000);
     }
 
     public static PartTimeEmployee partTimeEmployeeLita(){
-        return new PartTimeEmployee(1, "Lita", 22, 11_750);
+        return new PartTimeEmployee( "Lita", 22, 11_750);
     }
 
     public static void main(String[] args) {
